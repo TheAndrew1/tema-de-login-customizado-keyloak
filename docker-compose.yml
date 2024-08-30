@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:22.0.2
+    command: start-dev --spi-theme-static-max-age=-1 --spi-theme-cache-themes=false --spi-theme-cache-templates=false
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      DB_VENDOR: postgres
+      DB_ADDR: postgres
+      DB_DATABASE: KEYCLOAK
+      DB_USER: KEYCLOAK
+      DB_PASSWORD: KEYCLOAK
+    ports:
+      - "8080:8080"
+    depends_on:
+      - aspide-api
+    networks:
+      - aspide-net
+
+  aspide-api:
+    container_name: ASPIDE
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: aspide
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    networks:
+      - aspide-net
+
+networks:
+  aspide-net:
+    driver: bridge

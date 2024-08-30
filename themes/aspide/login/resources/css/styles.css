@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: "Rawline", sans-serif;
+}
+
+.login-pf body {
+    background: #0C326F;
+}
+
+.card-pf {
+    width: 500px;
+    margin: auto;
+}
+
+#kc-login {
+    background-color: #1351B4;
+    border-radius: 30px;
+}
+
+#kc-header {
+    display: none;
+}
