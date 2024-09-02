@@ -23,6 +23,13 @@
     font-size: 16.8px;
 }
 
+#kc-login:focus{
+    border: none;
+    padding: 5px;
+    outline: dashed 3px #C2850C;
+    outline-offset: 4px;
+}
+
 #kc-header {
     display: none;
 }
@@ -43,6 +50,30 @@
     color: black;
 }
 
-.form-control{
-    border: solid 1 #888888;
+#username{
+    border: solid 1px #888888;
+    border-radius: 4px;
+}
+
+#username:hover{
+    background-color: #DEDEDE;
+}
+
+#username:focus{
+    border: none;
+    outline: solid 3px #C2850C;
+}
+
+#password{
+    border: solid 1px #888888;
+    border-radius: 4px;
+}
+
+#password:hover{
+    background-color: #DEDEDE;
+}
+
+#password:focus{
+    border: none;
+    outline: solid 3px #C2850C;
 }

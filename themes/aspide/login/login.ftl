@@ -37,7 +37,7 @@
 
                 </div>
 
-                <p id="help-message">Para o primeiro acesso, utilize a senha temporária gerada pelo administrador.</p>
+                <p id="help-message" aria-describedby="Instruções para primeiro acesso">Para o primeiro acesso, utilize a senha temporária gerada pelo administrador.</p>
 
                 <div class="${properties.kcFormGroupClass!} ${properties.kcFormSettingClass!}">
                     <div id="kc-form-options">
