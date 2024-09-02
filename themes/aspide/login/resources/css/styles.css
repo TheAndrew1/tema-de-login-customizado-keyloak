@@ -11,6 +11,14 @@
     color: black;
 }
 
+.login-pf-page {
+    padding-top: 25vh;
+}
+
+#kc-header {
+    display: none;
+}
+
 .card-pf {
     width: 408px;
     margin: auto;
@@ -21,17 +29,18 @@
     border-radius: 30px;
     font-weight: 600;
     font-size: 16.8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#kc-login:hover {
+    background-color: #396DC0;
 }
 
 #kc-login:focus{
     border: none;
-    padding: 5px;
     outline: dashed 3px #C2850C;
     outline-offset: 4px;
-}
-
-#kc-header {
-    display: none;
 }
 
 #title{
