@@ -8,18 +8,41 @@
 
 .login-pf body {
     background: #0C326F;
+    color: black;
 }
 
 .card-pf {
-    width: 500px;
+    width: 408px;
     margin: auto;
 }
 
 #kc-login {
     background-color: #1351B4;
     border-radius: 30px;
+    font-weight: 600;
+    font-size: 16.8px;
 }
 
 #kc-header {
     display: none;
+}
+
+#title{
+    font-weight: 500;
+    font-size: 29.3px;
+}
+
+.field-labels{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#help-message{
+    font-weight: 400;
+    font-size: 16.8px;
+    color: black;
+}
+
+.form-control{
+    border: solid 1 #888888;
 }
