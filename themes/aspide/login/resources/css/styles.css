@@ -12,7 +12,7 @@
 }
 
 .login-pf-page {
-    padding-top: 25vh;
+    padding-top: 10%;
 }
 
 #kc-header {
@@ -37,52 +37,68 @@
     background-color: #396DC0;
 }
 
-#kc-login:focus{
+#kc-login:focus {
     border: none;
     outline: dashed 3px #C2850C;
     outline-offset: 4px;
 }
 
-#title{
+#title {
     font-weight: 500;
     font-size: 29.3px;
 }
 
-.field-labels{
+.field-labels {
     font-weight: 600;
     font-size: 14px;
 }
 
-#help-message{
+#help-message {
     font-weight: 400;
     font-size: 16.8px;
     color: black;
 }
 
-#username{
+.no-border {
+    background: none !important;
+    border: none !important;
+}
+
+svg {
+    color: #888888;
+    margin-left: 8px;
+    height: 16px;
+    width: 16px;
+}
+
+.field {
     border: solid 1px #888888;
     border-radius: 4px;
 }
 
-#username:hover{
+.field:hover{
     background-color: #DEDEDE;
 }
 
-#username:focus{
+.field:focus-within{
     border: none;
     outline: solid 3px #C2850C;
 }
 
-#password{
-    border: solid 1px #888888;
-    border-radius: 4px;
+#username {
+    padding-left: 0;
 }
 
-#password:hover{
-    background-color: #DEDEDE;
+#username:focus {
+    border: none;
+    outline: none;
+}
+
+#password {
+    padding-left: 0;
 }
 
 #password:focus{
     border: none;
-    outline: solid 3px #C2850C;
+    outline: none;
 }

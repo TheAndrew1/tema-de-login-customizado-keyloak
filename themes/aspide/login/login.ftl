@@ -11,8 +11,15 @@
                     <div class="${properties.kcFormGroupClass!}">
                         <label for="username" class="${properties.kcLabelClass!} field-labels"><#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if></label>
 
-                        <input tabindex="1" id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}"  type="text" autofocus autocomplete="off"
+                        <div class="pf-c-input-group field">
+                            <span class="pf-c-input-group__text no-border">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path fill="#888888" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/>
+                                </svg>
+                            </span>
+                            <input tabindex="1" id="username" class="${properties.kcInputClass!} pf-c-form-control no-border" name="username" value="${(login.username!'')}"  type="text" autofocus autocomplete="off"
                                placeholder="Digite seu usuário" aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"/>
+                        </div>                        
 
                         <#if messagesPerField.existsError('username','password')>
                             <span id="input-error" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
@@ -26,8 +33,15 @@
                 <div class="${properties.kcFormGroupClass!}">
                     <label for="password" class="${properties.kcLabelClass!} field-labels">${msg("password")}</label>
 
-                    <input tabindex="2" id="password" class="${properties.kcInputClass!}" name="password" type="password" autocomplete="off"
-                           placeholder="Digite sua senha" aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"/>
+                    <div class="pf-c-input-group field">
+                        <span class="pf-c-input-group__text no-border">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="#888888" d="M512 176C512 273.2 433.2 352 336 352c-11.2 0-22.2-1.1-32.8-3.1l-24 27A24 24 0 0 1 261.2 384H224v40c0 13.3-10.7 24-24 24h-40v40c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24v-78.1c0-6.4 2.5-12.5 7-17l161.8-161.8C163.1 213.8 160 195.3 160 176 160 78.8 238.8 0 336 0 433.5 0 512 78.5 512 176zM336 128c0 26.5 21.5 48 48 48s48-21.5 48-48-21.5-48-48-48-48 21.5-48 48z"/>
+                            </svg>
+                        </span>
+                        <input tabindex="2" id="password" class="${properties.kcInputClass!} pf-c-form-control no-border" name="password" type="password" autocomplete="off"
+                            placeholder="Digite sua senha" aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"/>
+                    </div>
 
                     <#if usernameHidden?? && messagesPerField.existsError('username','password')>
                         <span id="input-error" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
