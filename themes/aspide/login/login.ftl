@@ -41,6 +41,11 @@
                         </span>
                         <input tabindex="2" id="password" class="${properties.kcInputClass!} pf-c-form-control no-border" name="password" type="password" autocomplete="off"
                             placeholder="Digite sua senha" aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"/>
+                        <span class="pf-c-input-group__text no-border" id="password-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="password-icon" viewBox="0 0 576 512">
+                                <path fill="#1351b4" d="M572.5 241.4C518.3 135.6 410.9 64 288 64S57.7 135.6 3.5 241.4a32.4 32.4 0 0 0 0 29.2C57.7 376.4 165.1 448 288 448s230.3-71.6 284.5-177.4a32.4 32.4 0 0 0 0-29.2zM288 400a144 144 0 1 1 144-144 143.9 143.9 0 0 1 -144 144zm0-240a95.3 95.3 0 0 0 -25.3 3.8 47.9 47.9 0 0 1 -66.9 66.9A95.8 95.8 0 1 0 288 160z"/>
+                            </svg>
+                        </span>
                     </div>
 
                     <#if usernameHidden?? && messagesPerField.existsError('username','password')>
@@ -77,7 +82,7 @@
 
                   <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}">
                       <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>
-                      <input tabindex="4" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!} bg-violet-60" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
+                      <input tabindex="4" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg('doLogIn')}"/>
                   </div>
             </form>
         </#if>
