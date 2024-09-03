@@ -41,6 +41,7 @@
                         </span>
                         <input tabindex="2" id="password" class="${properties.kcInputClass!} pf-c-form-control no-border" name="password" type="password" autocomplete="off"
                             placeholder="Digite sua senha" aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"/>
+                        
                     </div>
 
                     <#if usernameHidden?? && messagesPerField.existsError('username','password')>

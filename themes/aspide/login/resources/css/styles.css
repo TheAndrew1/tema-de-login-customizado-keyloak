@@ -106,3 +106,12 @@ svg {
     border: none;
     outline: none;
 }
+
+#password-toggle {
+    margin: 4px;
+    border-radius: 32px;
+    cursor: pointer;
+}
+#password-icon {
+    margin: 0;
+}
