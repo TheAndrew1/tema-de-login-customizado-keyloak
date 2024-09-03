@@ -106,18 +106,3 @@ svg {
     border: none;
     outline: none;
 }
-
-#password-toggle {
-    margin: 4px;
-    border-radius: 32px;
-}
-
-#password-toggle:hover {
-    margin: 4px;
-    background-color: #D9E3F3 !important;
-    cursor: pointer;
-}
-
-#password-icon {
-    margin: 0;
-}
