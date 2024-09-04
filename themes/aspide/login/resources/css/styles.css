@@ -37,6 +37,11 @@
     background-color: #396DC0;
 }
 
+#kc-login:active {
+    color: white;
+    background-color: #7292C7;
+}
+
 #kc-login:focus {
     border: none;
     outline: dashed 4px #C2850C;
@@ -59,6 +64,15 @@
     color: black;
 }
 
+.danger {
+    padding: 4px;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    background-color: #E52207;
+}
+
 .no-border {
     background: none !important;
     border: none !important;
@@ -71,12 +85,16 @@ svg {
     width: 16px;
 }
 
+input::placeholder {
+    font-style: italic;
+}
+
 .field {
     border: solid 1px #888888;
     border-radius: 4px;
 }
 
-.field:hover{
+.field:hover:not(:has(#password-toggle:hover)){
     background-color: #DEDEDE;
 }
 
@@ -112,6 +130,15 @@ svg {
     border-radius: 32px;
     cursor: pointer;
 }
+
+#password-toggle:hover {
+    background-color: #D9E3F3 !important;
+}
+
+#password-toggle:active {
+    background-color: #98AFD2 !important;
+}
+
 #password-icon {
     margin: 0;
 }
