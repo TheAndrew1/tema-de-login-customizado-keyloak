@@ -17,8 +17,7 @@ window.onload = function() {
       var password = document.getElementById(passwordId);
       if ((password) && (password.style) && (password.style.display !== "none")){
         var icon = document.getElementById("password-toggle");
-        icon.addEventListener("click", fToggle.bind(icon, password)); 
-        password.parentNode.insertBefore(icon, password.nextSibling);
+        icon.addEventListener("click", fToggle.bind(icon, password));
       }
     };
   
