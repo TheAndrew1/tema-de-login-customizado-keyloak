@@ -19,7 +19,7 @@ services:
     networks:
       - aspide-net
     volumes:
-      - ./deploy/aspide.jar:/opt/keycloak/providers/aspide.jar
+      - ./aspide.jar:/opt/keycloak/providers/aspide.jar
 
   aspide-api:
     container_name: ASPIDE
