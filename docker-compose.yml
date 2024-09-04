@@ -3,7 +3,7 @@ version: '3.8'
 services:
   keycloak:
     image: quay.io/keycloak/keycloak:22.0.2
-    command: start-dev --spi-theme-static-max-age=-1 --spi-theme-cache-themes=false --spi-theme-cache-templates=false
+    command: start-dev
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
@@ -18,6 +18,8 @@ services:
       - aspide-api
     networks:
       - aspide-net
+    volumes:
+      - ./deploy/aspide.jar:/opt/keycloak/providers/aspide.jar
 
   aspide-api:
     container_name: ASPIDE

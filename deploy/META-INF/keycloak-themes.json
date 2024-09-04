@@ -1,0 +1,6 @@
+{
+    "themes": [{
+        "name" : "aspide",
+        "types": [ "login" ]
+    }]
+}
