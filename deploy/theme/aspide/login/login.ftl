@@ -23,7 +23,11 @@
 
                         <#if messagesPerField.existsError('username','password')>
                             <span id="input-error" class="${properties.kcInputErrorMessageClass!} danger" aria-live="polite">
-                                    ${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
+                                <svg xmlns="http://www.w3.org/2000/svg" class="error-icon" viewBox="0 0 512 512">
+                                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path fill="#FFFFFF" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/>
+                                </svg>
+                                <span>${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}</span>
                             </span>
                         </#if>
 
@@ -43,14 +47,18 @@
                             placeholder="Digite sua senha" aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"/>
                         <span class="pf-c-input-group__text no-border" id="password-toggle">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" id="password-icon">
-                                <path fill="#1351b4" id="caminhoSvg" d="M572.5 241.4C518.3 135.6 410.9 64 288 64S57.7 135.6 3.5 241.4a32.4 32.4 0 0 0 0 29.2C57.7 376.4 165.1 448 288 448s230.3-71.6 284.5-177.4a32.4 32.4 0 0 0 0-29.2zM288 400a144 144 0 1 1 144-144 143.9 143.9 0 0 1 -144 144zm0-240a95.3 95.3 0 0 0 -25.3 3.8 47.9 47.9 0 0 1 -66.9 66.9A95.8 95.8 0 1 0 288 160z"/>
+                                <path fill="#1351B4" id="caminhoSvg" d="M572.5 241.4C518.3 135.6 410.9 64 288 64S57.7 135.6 3.5 241.4a32.4 32.4 0 0 0 0 29.2C57.7 376.4 165.1 448 288 448s230.3-71.6 284.5-177.4a32.4 32.4 0 0 0 0-29.2zM288 400a144 144 0 1 1 144-144 143.9 143.9 0 0 1 -144 144zm0-240a95.3 95.3 0 0 0 -25.3 3.8 47.9 47.9 0 0 1 -66.9 66.9A95.8 95.8 0 1 0 288 160z"/>
                             </svg>
                         </span>
                     </div>
 
                     <#if usernameHidden?? && messagesPerField.existsError('username','password')>
                         <span id="input-error" class="${properties.kcInputErrorMessageClass!} danger" aria-live="polite">
-                                ${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path fill="#FFFFFF" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/>
+                            </svg>
+                            <span>${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}</span>
                         </span>
                     </#if>
 
