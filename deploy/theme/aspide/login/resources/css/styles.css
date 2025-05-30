@@ -50,13 +50,25 @@
     background-color: black;
     background-position: center;
     background-origin: content-box;
-    min-height: 130px;
+    min-height: 140px;
     max-height: 160px;
     padding: 1rem 5rem;
 }
 
 #kc-content-wrapper {
+  padding: 2em 2em 2em;
+}
+
+@media (min-width: 769px) {
+  #kc-content-wrapper {
+    padding: 2em 4em 4em;
+  }
+}
+
+@media (min-width: 1025px) {
+  #kc-content-wrapper {
     padding: 2em 6em 4em;
+  }
 }
 
 #kc-form {
