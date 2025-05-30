@@ -7,12 +7,17 @@
 }
 
 .login-pf body {
-    background: #0C326F;
+    background-image: url("../img/aspide-background.png");
+    background-size: cover;
     color: black;
 }
 
 .login-pf-page {
-    padding-top: 8%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }
 
 #kc-header {
@@ -20,48 +25,56 @@
 }
 
 .card-pf {
-    width: 408px;
-    margin: auto;
+    width: 33%;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0;
+    border: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 0 !important;
 }
 
-#kc-login {
-    background-color: #1351B4;
-    border-radius: 32px;
-    font-weight: 600;
-    font-size: 16.8px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+.login-pf-header {
+    margin: 0 !important;
 }
 
-#kc-login:hover {
-    background-color: #396DC0;
+#kc-page-title {
+    margin: 0;
 }
 
-#kc-login:active {
-    color: white;
-    background-color: #7292C7;
+.logo {
+    background-image: url(../img/aspide-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: center;
+    background-origin: content-box;
+    min-height: 130px;
+    max-height: 160px;
+    padding: 1rem 5rem;
 }
 
-#kc-login:focus {
-    border: none;
-    outline: dashed 4px #C2850C;
-    outline-offset: 4px;
+#kc-content-wrapper {
+    padding: 2em 6em 4em;
+}
+
+#kc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding-inline: 1em;
 }
 
 #title {
-    font-weight: 500;
-    font-size: 29.3px;
+    font-weight: 400;
+    font-size: 20.16px;
+    text-align: center;
 }
 
 .field-labels {
     font-weight: 600;
     font-size: 14px;
-}
-
-#help-message {
-    font-weight: 400;
-    font-size: 16.8px;
-    color: black;
 }
 
 .danger {
@@ -73,6 +86,7 @@
     font-weight: 500;
     color: white;
     background-color: #E52207;
+    font-style: normal;
 }
 
 .no-border {
@@ -116,6 +130,11 @@ input::placeholder {
     outline: none;
 }
 
+.error-icon {
+    margin: 0;
+    vertical-align: text-bottom;
+}
+
 #password {
     padding-left: 0;
     font-size: 14px;
@@ -145,7 +164,38 @@ input::placeholder {
     margin: 0;
 }
 
-.error-icon {
-    margin: 0;
-    vertical-align: text-bottom;
+#help-message {
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+}
+
+#kc-login {
+    background-color: #1351B4;
+    border-radius: 32px;
+    font-weight: 600;
+    font-size: 16.8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 67%;
+    justify-self: center;
+}
+
+#kc-login:hover {
+    background-color: #396DC0;
+}
+
+#kc-login:active {
+    color: white;
+    background-color: #7292C7;
+}
+
+#kc-login:focus {
+    border: none;
+    outline: dashed 4px #C2850C;
+    outline-offset: 4px;
+}
+
+.regua-logos {
+    margin-top: 2em;
 }
